@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import '../../config.dart';
 import 'custom_navbar.dart';
 
-class RsScaffold extends StatelessWidget {
+class CustomScaffold extends StatelessWidget {
   final Widget body, appbar;
   final Color statusBarColor, systemNavigationBarColor;
   final Color? bgColor;
@@ -16,7 +16,7 @@ class RsScaffold extends StatelessWidget {
   final int? currentIndex;
   final void Function(int)? onTap;
 
-  const RsScaffold({
+  const CustomScaffold({
     super.key,
     required this.body,
     required this.useSafeArea,
