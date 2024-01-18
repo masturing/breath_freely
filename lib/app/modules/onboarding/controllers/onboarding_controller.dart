@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
+
 class OnboardingController extends GetxController {
   //TODO: Implement OnboardingController
 
@@ -18,6 +20,8 @@ class OnboardingController extends GetxController {
   void onClose() {
     super.onClose();
   }
+
+  void toAuth() => Get.offNamed(Routes.AUTH_SCREEN);
 
   void increment() => count.value++;
 }

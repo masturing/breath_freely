@@ -1,10 +1,10 @@
 import 'package:breath_freely/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
-  //TODO: Implement HomeController
-  RxInt currentIndex = 0.obs;
+class ResultPredictController extends GetxController {
+  //TODO: Implement ResultPredictController
 
+  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -20,11 +20,9 @@ class HomeController extends GetxController {
     super.onClose();
   }
 
-  void onTap(int index) {
-    if (index == 1) {
-      Get.toNamed(Routes.PREDICT);
-    } else {
-      currentIndex.value = index;
-    }
+  void increment() => count.value++;
+
+  void backHome() {
+    Get.offAllNamed(Routes.HOME);
   }
 }

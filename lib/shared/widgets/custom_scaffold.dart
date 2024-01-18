@@ -53,7 +53,7 @@ class CustomScaffold extends StatelessWidget {
                       child: appbar,
                     ),
                     withNavbar
-                        ? RsBottomNavbar(
+                        ? CustomBottomNavbar(
                             currentIndex: currentIndex,
                             onTap: onTap,
                           )
@@ -79,7 +79,7 @@ class CustomScaffold extends StatelessWidget {
                             top: 0,
                             child: appbar,
                           ),
-                          RsBottomNavbar(
+                          CustomBottomNavbar(
                             currentIndex: currentIndex,
                             onTap: onTap,
                           )

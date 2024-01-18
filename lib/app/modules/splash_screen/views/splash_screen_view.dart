@@ -10,6 +10,7 @@ class SplashScreenView extends GetView<SplashScreenController> {
   const SplashScreenView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final SplashScreenController controller = Get.put(SplashScreenController());
     return CustomScaffold(
       useSafeArea: true,
       body: Center(

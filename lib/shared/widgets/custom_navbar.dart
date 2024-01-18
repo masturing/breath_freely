@@ -6,10 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../config.dart';
 
-class RsBottomNavbar extends StatelessWidget {
+class CustomBottomNavbar extends StatelessWidget {
   final void Function(int)? onTap;
   final int? currentIndex;
-  const RsBottomNavbar({
+  const CustomBottomNavbar({
     Key? key,
     this.onTap,
     required this.currentIndex,
@@ -26,27 +26,34 @@ class RsBottomNavbar extends StatelessWidget {
           right: MainConfig.kDefaultMargin,
         ),
         width: double.infinity,
-        height: 60,
+        height: 80,
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(18),
+          borderRadius: BorderRadius.circular(20),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            RsItemNavbar(
+            ItemNavbar(
               index: 0,
               currentIndex: currentIndex ?? 0,
               imageUrl: 'assets/icons/ic_home.png',
-              text: "Dashboard",
+              text: "Home",
               onTap: () => onTap!(0),
             ),
-            RsItemNavbar(
+            ItemNavbar(
               index: 1,
               currentIndex: currentIndex ?? 0,
-              imageUrl: 'assets/icons/ic_data.png',
-              text: "Data Center",
+              imageUrl: 'assets/icons/ic_predict.png',
+              text: "Predict",
               onTap: () => onTap!(1),
+            ),
+            ItemNavbar(
+              index: 2,
+              currentIndex: currentIndex ?? 0,
+              imageUrl: 'assets/icons/ic_person.png',
+              text: "Profile",
+              onTap: () => onTap!(2),
             )
           ],
         ),
@@ -55,13 +62,13 @@ class RsBottomNavbar extends StatelessWidget {
   }
 }
 
-class RsItemNavbar extends StatelessWidget {
+class ItemNavbar extends StatelessWidget {
   final int index;
   final int currentIndex;
   final String imageUrl;
   final String text;
   final Function() onTap;
-  const RsItemNavbar({
+  const ItemNavbar({
     Key? key,
     required this.index,
     required this.currentIndex,
@@ -77,16 +84,16 @@ class RsItemNavbar extends StatelessWidget {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         curve: Curves.easeInOut,
-        width: 150,
-        height: 50,
+        width: 90,
+        height: 65,
         decoration: BoxDecoration(
           color: (currentIndex == index) ? Colors.blueAccent : Colors.white,
           borderRadius: BorderRadius.circular(15),
         ),
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            0.gW,
+            0.gH,
             Image.asset(
               imageUrl,
               width: 24,
@@ -94,7 +101,7 @@ class RsItemNavbar extends StatelessWidget {
               color:
                   (currentIndex == index) ? Colors.white : Colors.grey.shade300,
             ),
-            10.gW,
+            3.gH,
             Text(text,
                 style: (currentIndex == index)
                     ? CustomTextStyle.bold
