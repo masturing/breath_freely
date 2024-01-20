@@ -25,4 +25,8 @@ class PredictController extends GetxController {
   void startPrediction() {
     Get.offNamed(Routes.RESULT_PREDICT);
   }
+
+  void back() {
+    Get.back();
+  }
 }

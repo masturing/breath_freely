@@ -25,6 +25,7 @@ class HomeController extends GetxController {
       Get.toNamed(Routes.PREDICT);
     } else {
       currentIndex.value = index;
+      ;
     }
   }
 }

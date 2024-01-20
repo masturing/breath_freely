@@ -7,8 +7,8 @@ List<Map<String, dynamic>> genderListData = [
 ];
 
 List<Map<String, dynamic>> defaultRadioData = [
-  {'value': '0', 'text': 'No'},
   {'value': '1', 'text': 'Yes'},
+  {'value': '0', 'text': 'No'},
 ];
 
 List<Map<String, dynamic>> loginForm = [

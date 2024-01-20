@@ -21,7 +21,7 @@ class _HomeSectionState extends State<HomeSection> {
         children: [
           Text(
             "Hai, Selamat Datang",
-            style: CustomTextStyle.bold.copyWith(fontSize: 18.sp),
+            style: CustomTextStyle.bold.copyWith(fontSize: 24.sp),
           ),
           8.gH,
           Text(
