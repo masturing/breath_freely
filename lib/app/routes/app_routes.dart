@@ -9,6 +9,9 @@ abstract class Routes {
   static const AUTH_SCREEN = _Paths.AUTH_SCREEN;
   static const PREDICT = _Paths.PREDICT;
   static const RESULT_PREDICT = _Paths.RESULT_PREDICT;
+  static const ARTICLE_DETAIL = _Paths.ARTICLE_DETAIL;
+  static const AQI_MAP = _Paths.AQI_MAP;
+  static const HISTORY_PREDICT = _Paths.HISTORY_PREDICT;
 }
 
 abstract class _Paths {
@@ -19,4 +22,7 @@ abstract class _Paths {
   static const AUTH_SCREEN = '/auth-screen';
   static const PREDICT = '/predict';
   static const RESULT_PREDICT = '/result-predict';
+  static const ARTICLE_DETAIL = '/article-detail';
+  static const AQI_MAP = '/aqi-map';
+  static const HISTORY_PREDICT = '/history-predict';
 }

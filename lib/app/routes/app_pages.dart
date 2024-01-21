@@ -1,7 +1,13 @@
 import 'package:get/get.dart';
 
+import '../modules/aqi_map/bindings/aqi_map_binding.dart';
+import '../modules/aqi_map/views/aqi_map_view.dart';
+import '../modules/article_detail/bindings/article_detail_binding.dart';
+import '../modules/article_detail/views/article_detail_view.dart';
 import '../modules/auth_screen/bindings/auth_screen_binding.dart';
 import '../modules/auth_screen/views/auth_screen_view.dart';
+import '../modules/history_predict/bindings/history_predict_binding.dart';
+import '../modules/history_predict/views/history_predict_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
@@ -50,6 +56,21 @@ class AppPages {
       name: _Paths.RESULT_PREDICT,
       page: () => const ResultPredictView(),
       binding: ResultPredictBinding(),
+    ),
+    GetPage(
+      name: _Paths.ARTICLE_DETAIL,
+      page: () => const ArticleDetailView(),
+      binding: ArticleDetailBinding(),
+    ),
+    GetPage(
+      name: _Paths.AQI_MAP,
+      page: () => const AqiMapView(),
+      binding: AqiMapBinding(),
+    ),
+    GetPage(
+      name: _Paths.HISTORY_PREDICT,
+      page: () => const HistoryPredictView(),
+      binding: HistoryPredictBinding(),
     ),
   ];
 }
