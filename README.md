@@ -1,10 +1,10 @@
-# Breath Freely
+# Breath Freely (Under Development)
 
-Avada Kedavra Team
-- Abigail Metanoia Melody
-- Resma Adi Nugroho
-- Muhamad Aditya Yusuf
-- Alwan Haris Farrasi
+Avada Kedavra Hackfest Team
+- Abigail Metanoia Melody (UI/UX Designer)
+- Resma Adi Nugroho (Fullstack Engineer)
+- Muhamad Aditya Yusuf (ML Engineer)
+- Alwan Haris Farrasi (Business and Strategic)
 
 Breath Freely merupakan aplikasi dengan berbasis platform mobile yang berguna untuk memonitoring dan memprediksi penyakit terutama untuk kanker paru-paru menggunakan model neural network. Beberapa fitur utama dari aplikasi ini yakni: Fitur Prediksi Risiko Kanker Paru-paru: Memberikan prediksi risiko individu terkena kanker paru-paru berdasarkan jawaban atas pertanyaan harian. Fitur Integrasi AQI: Menyediakan informasi tentang kualitas udara dan hubungannya dengan risiko kanker paru-paru. Fitur Rekomendasi Personalisasi: Memberikan saran dan rekomendasi yang dipersonalisasi berdasarkan hasil prediksi dan data historis pengguna.
 
