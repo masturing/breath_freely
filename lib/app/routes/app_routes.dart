@@ -12,6 +12,7 @@ abstract class Routes {
   static const ARTICLE_DETAIL = _Paths.ARTICLE_DETAIL;
   static const AQI_MAP = _Paths.AQI_MAP;
   static const HISTORY_PREDICT = _Paths.HISTORY_PREDICT;
+  static const MONITORING = _Paths.MONITORING;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const ARTICLE_DETAIL = '/article-detail';
   static const AQI_MAP = '/aqi-map';
   static const HISTORY_PREDICT = '/history-predict';
+  static const MONITORING = '/monitoring';
 }

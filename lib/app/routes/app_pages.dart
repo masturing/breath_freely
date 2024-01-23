@@ -10,6 +10,8 @@ import '../modules/history_predict/bindings/history_predict_binding.dart';
 import '../modules/history_predict/views/history_predict_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/monitoring/bindings/monitoring_binding.dart';
+import '../modules/monitoring/views/monitoring_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/predict/bindings/predict_binding.dart';
@@ -71,6 +73,11 @@ class AppPages {
       name: _Paths.HISTORY_PREDICT,
       page: () => const HistoryPredictView(),
       binding: HistoryPredictBinding(),
+    ),
+    GetPage(
+      name: _Paths.MONITORING,
+      page: () => const MonitoringView(),
+      binding: MonitoringBinding(),
     ),
   ];
 }

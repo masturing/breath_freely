@@ -41,4 +41,10 @@ class MainConfig {
     decimalSeparator: ',',
     symbolSeparator: ' ',
   );
+
+  static List<String> backgroundImages = [
+    'assets/images/img_forest.png',
+    'assets/images/img_sea.png',
+    'assets/images/img_urban.png',
+  ];
 }

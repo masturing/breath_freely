@@ -1,9 +1,11 @@
+import 'package:breath_freely/app/routes/app_pages.dart';
 import 'package:breath_freely/shared/extensions/gaps.dart';
 import 'package:breath_freely/shared/style/text_style.dart';
 import 'package:breath_freely/shared/utils/screen.dart';
 import 'package:breath_freely/shared/widgets/custom_article_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class HomeSection extends StatefulWidget {
   const HomeSection({super.key});
@@ -134,34 +136,39 @@ class _HomeSectionState extends State<HomeSection> {
                   ],
                 ),
               ),
-              Container(
-                width: 100.w,
-                height: 100.w,
-                padding: EdgeInsets.all(15.w),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                      'assets/icons/ic_history.png',
-                      width: 20.w,
-                      height: 20.w,
-                      color: Colors.blueAccent,
-                    ),
-                    Text(
-                      "Lihat",
-                      style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
-                    ),
-                    0.gH,
-                    Text(
-                      "Riwayat",
-                      style: CustomTextStyle.semiBold,
-                    )
-                  ],
+              GestureDetector(
+                onTap: () {
+                  Get.toNamed(Routes.HISTORY_PREDICT);
+                },
+                child: Container(
+                  width: 100.w,
+                  height: 100.w,
+                  padding: EdgeInsets.all(15.w),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/icons/ic_history.png',
+                        width: 20.w,
+                        height: 20.w,
+                        color: Colors.blueAccent,
+                      ),
+                      Text(
+                        "Lihat",
+                        style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
+                      ),
+                      0.gH,
+                      Text(
+                        "Riwayat",
+                        style: CustomTextStyle.semiBold,
+                      )
+                    ],
+                  ),
                 ),
               ),
             ],
