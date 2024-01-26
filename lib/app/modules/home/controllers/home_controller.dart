@@ -28,4 +28,8 @@ class HomeController extends GetxController {
       ;
     }
   }
+
+  void onLogOut() {
+    Get.offAllNamed(Routes.AUTH_SCREEN);
+  }
 }

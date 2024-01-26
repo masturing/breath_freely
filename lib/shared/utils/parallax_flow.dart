@@ -36,7 +36,7 @@ class ParallaxFlowDelegate extends FlowDelegate {
 
     // Calculate the horizontal alignment of the background
     // based on the scroll percent.
-    final horizontalAlignment = Alignment(scrollFraction * 2 - 1, 0);
+    final horizontalAlignment = Alignment(scrollFraction * 3 - 1, 0);
 
     // Convert the background alignment into a pixel offset for
     // painting purposes.

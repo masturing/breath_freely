@@ -32,10 +32,11 @@ class HistoryPredictView extends GetView<HistoryPredictController> {
               onPageChanged: (value) => controller.selectedIndex.value = value,
               itemBuilder: (context, index) {
                 return Obx(() => CardParallax(
-                    title: 'Disease Name',
-                    description: 'Disease Description',
-                    status: 'Disease Status',
-                    date: 'Disease Date',
+                    title: 'Lung Disease',
+                    description:
+                        'There is a droplet infection in the lungs that dangerous',
+                    status: 'Danger',
+                    date: '01-10-2021',
                     isSelected: controller.selectedIndex.value == index,
                     assetImage: MainConfig.backgroundImages[index]));
               }),

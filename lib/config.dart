@@ -43,8 +43,8 @@ class MainConfig {
   );
 
   static List<String> backgroundImages = [
-    'assets/images/img_forest.png',
-    'assets/images/img_sea.png',
-    'assets/images/img_urban.png',
+    'assets/images/img_forest2.png',
+    'assets/images/img_sea2.png',
+    'assets/images/img_urban2.png',
   ];
 }

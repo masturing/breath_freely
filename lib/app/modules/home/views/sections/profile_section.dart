@@ -3,8 +3,10 @@ import 'package:breath_freely/shared/style/text_style.dart';
 import 'package:breath_freely/shared/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../../../shared/utils/screen.dart';
+import '../../controllers/home_controller.dart';
 
 class ProfileSection extends StatefulWidget {
   const ProfileSection({super.key});
@@ -16,6 +18,7 @@ class ProfileSection extends StatefulWidget {
 class _ProfileSectionState extends State<ProfileSection> {
   @override
   Widget build(BuildContext context) {
+    final HomeController controller = Get.put(HomeController());
     return Container(
       width: ScreenSize.w,
       margin: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
@@ -147,7 +150,10 @@ class _ProfileSectionState extends State<ProfileSection> {
             ),
           ),
           32.gH,
-          CustomButton(color: Colors.red, text: "Log Out", onPressed: () {})
+          CustomButton(
+              color: Colors.red,
+              text: "Log Out",
+              onPressed: controller.onLogOut)
         ],
       ),
     );
