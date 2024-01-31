@@ -11,12 +11,7 @@ class AQIRepository implements AQIAbstractRepository {
     try {
       final res = await dio(MainConfig.apiAqiUrl)
           .get('/feed/$city/?token=${MainConfig.apiAqiKey}');
-      AqiModel aqiModel = AqiModel.fromJson(res.data);
-      if (aqiModel.status == 'ok') {
-        return aqiModel.data!.aqi!;
-      } else {
-        return 0;
-      }
+      return res.data['data']['aqi'];
     } on DioException catch (e) {
       Get.snackbar("Error", e.message!);
       return 0;

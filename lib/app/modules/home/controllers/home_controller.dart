@@ -10,6 +10,7 @@ class HomeController extends GetxController {
 
   @override
   void onInit() {
+    getAQI();
     super.onInit();
   }
 

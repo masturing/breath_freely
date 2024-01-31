@@ -19,8 +19,8 @@ Map<String, dynamic> _$AqiModelToJson(AqiModel instance) => <String, dynamic>{
     };
 
 Data _$DataFromJson(Map<String, dynamic> json) => Data(
-      aqi: json['aqi'] as int?,
-      idx: json['idx'] as int?,
+      aqi: json['aqi'] as num?,
+      idx: json['idx'] as num?,
       attributions: (json['attributions'] as List<dynamic>?)
           ?.map((e) => Attribution.fromJson(e as Map<String, dynamic>))
           .toList(),

@@ -20,8 +20,8 @@ class AqiModel {
 
 @JsonSerializable()
 class Data {
-  final int? aqi;
-  final int? idx;
+  final num? aqi;
+  final num? idx;
   final List<Attribution>? attributions;
   final City? city;
   final String? dominentpol;
