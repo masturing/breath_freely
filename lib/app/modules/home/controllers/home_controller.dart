@@ -1,3 +1,4 @@
+import 'package:breath_freely/app/domain/repositories/implementation/aqi_repository.dart';
 import 'package:breath_freely/app/domain/repositories/implementation/user_repository.dart';
 import 'package:breath_freely/app/routes/app_pages.dart';
 import 'package:get/get.dart';
@@ -5,6 +6,7 @@ import 'package:get/get.dart';
 class HomeController extends GetxController {
   //TODO: Implement HomeController
   RxInt currentIndex = 0.obs;
+  RxInt aqi = 0.obs;
 
   @override
   void onInit() {
@@ -47,5 +49,14 @@ class HomeController extends GetxController {
 
   String userName() {
     return UserRepository().getUserAttr('fullname');
+  }
+
+  void getAQI() async {
+    try {
+      int result = await AQIRepository().getAQI(city: "Semarang");
+      aqi.value = result;
+    } catch (e) {
+      Get.snackbar("Error", e.toString());
+    }
   }
 }

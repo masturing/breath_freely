@@ -57,7 +57,7 @@ class _HomeSectionState extends State<HomeSection> {
                         color: Colors.blueAccent,
                       ),
                       Text(
-                        "72",
+                        _homeController.aqi.value.toString(),
                         style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
                       ),
                       0.gH,
