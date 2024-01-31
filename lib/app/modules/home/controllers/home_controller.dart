@@ -1,3 +1,4 @@
+import 'package:breath_freely/app/domain/repositories/implementation/user_repository.dart';
 import 'package:breath_freely/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
@@ -20,16 +21,31 @@ class HomeController extends GetxController {
     super.onClose();
   }
 
-  void onTap(int index) {
-    if (index == 1) {
-      Get.toNamed(Routes.PREDICT);
-    } else {
-      currentIndex.value = index;
-      ;
-    }
+  // VOID FUNCTION
+
+  void onHistory() {
+    Get.toNamed(Routes.HISTORY_PREDICT);
+  }
+
+  void onPredict() {
+    Get.toNamed(Routes.PREDICT);
   }
 
   void onLogOut() {
-    Get.offAllNamed(Routes.AUTH_SCREEN);
+    UserRepository().logout();
+  }
+
+  void onTap(int index) {
+    if (index == 1) {
+      onPredict();
+    } else {
+      currentIndex.value = index;
+    }
+  }
+
+  // RETURN FUNCTION
+
+  String userName() {
+    return UserRepository().getUserAttr('fullname');
   }
 }

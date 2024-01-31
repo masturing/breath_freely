@@ -9,7 +9,7 @@ class UserModel {
   final String fullname;
   final String email;
   final String gender;
-  final DateTime birthdate;
+  final int yearBirth;
   final String telephone;
   final String hobby;
 
@@ -18,7 +18,7 @@ class UserModel {
     required this.fullname,
     required this.email,
     required this.gender,
-    required this.birthdate,
+    required this.yearBirth,
     required this.telephone,
     required this.hobby,
   });

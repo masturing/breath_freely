@@ -1,6 +1,6 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-class SupabaseClient {
+class SClient {
   static final supabase = Supabase.instance.client;
   Future<void> init() async {
     await Supabase.initialize(

@@ -11,7 +11,7 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       fullname: json['fullname'] as String,
       email: json['email'] as String,
       gender: json['gender'] as String,
-      birthdate: DateTime.parse(json['birthdate'] as String),
+      yearBirth: json['yearBirth'] as int,
       telephone: json['telephone'] as String,
       hobby: json['hobby'] as String,
     );
@@ -21,7 +21,7 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
       'fullname': instance.fullname,
       'email': instance.email,
       'gender': instance.gender,
-      'birthdate': instance.birthdate.toIso8601String(),
+      'yearBirth': instance.yearBirth,
       'telephone': instance.telephone,
       'hobby': instance.hobby,
     };

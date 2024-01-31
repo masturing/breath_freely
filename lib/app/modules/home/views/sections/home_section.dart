@@ -1,4 +1,4 @@
-import 'package:breath_freely/app/routes/app_pages.dart';
+import 'package:breath_freely/app/modules/home/controllers/home_controller.dart';
 import 'package:breath_freely/shared/extensions/gaps.dart';
 import 'package:breath_freely/shared/style/text_style.dart';
 import 'package:breath_freely/shared/utils/screen.dart';
@@ -15,6 +15,7 @@ class HomeSection extends StatefulWidget {
 }
 
 class _HomeSectionState extends State<HomeSection> {
+  final HomeController _homeController = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +24,7 @@ class _HomeSectionState extends State<HomeSection> {
       child: ListView(
         children: [
           Text(
-            "Hai, Selamat Datang",
+            "Hai, ${_homeController.userName()}",
             style: CustomTextStyle.bold.copyWith(fontSize: 24.sp),
           ),
           8.gH,
@@ -35,64 +36,71 @@ class _HomeSectionState extends State<HomeSection> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                width: 100.w,
-                height: 100.w,
-                padding: EdgeInsets.all(15.w),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                      'assets/icons/ic_env.png',
-                      width: 20.w,
-                      height: 20.w,
-                      color: Colors.blueAccent,
-                    ),
-                    Text(
-                      "72",
-                      style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
-                    ),
-                    0.gH,
-                    Text(
-                      "AQI Index",
-                      style: CustomTextStyle.semiBold,
-                    )
-                  ],
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  width: 100.w,
+                  height: 100.w,
+                  padding: EdgeInsets.all(15.w),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/icons/ic_env.png',
+                        width: 20.w,
+                        height: 20.w,
+                        color: Colors.blueAccent,
+                      ),
+                      Text(
+                        "72",
+                        style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
+                      ),
+                      0.gH,
+                      Text(
+                        "AQI Index",
+                        style: CustomTextStyle.semiBold,
+                      )
+                    ],
+                  ),
                 ),
               ),
-              Container(
-                width: 175.w,
-                height: 100.w,
-                padding: EdgeInsets.all(15.w),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                      'assets/icons/ic_health.png',
-                      width: 20.w,
-                      height: 20.w,
-                      color: Colors.blueAccent,
-                    ),
-                    Text(
-                      "Good",
-                      style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
-                    ),
-                    0.gH,
-                    Text(
-                      "Last check 01/01/2024",
-                      style: CustomTextStyle.semiBold.copyWith(fontSize: 12.sp),
-                    )
-                  ],
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  width: 175.w,
+                  height: 100.w,
+                  padding: EdgeInsets.all(15.w),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/icons/ic_health.png',
+                        width: 20.w,
+                        height: 20.w,
+                        color: Colors.blueAccent,
+                      ),
+                      Text(
+                        "Good",
+                        style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
+                      ),
+                      0.gH,
+                      Text(
+                        "Last check 01/01/2024",
+                        style:
+                            CustomTextStyle.semiBold.copyWith(fontSize: 12.sp),
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
@@ -106,40 +114,42 @@ class _HomeSectionState extends State<HomeSection> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                width: 175.w,
-                height: 100.w,
-                padding: EdgeInsets.all(15.w),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                      'assets/icons/ic_warn.png',
-                      width: 20.w,
-                      height: 20.w,
-                      color: Colors.orange,
-                    ),
-                    Text(
-                      "Never check",
-                      style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
-                    ),
-                    0.gH,
-                    Text(
-                      "Periksa sekarang",
-                      style: CustomTextStyle.semiBold.copyWith(fontSize: 12.sp),
-                    )
-                  ],
+              GestureDetector(
+                onTap: _homeController.onPredict,
+                child: Container(
+                  width: 175.w,
+                  height: 100.w,
+                  padding: EdgeInsets.all(15.w),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/icons/ic_warn.png',
+                        width: 20.w,
+                        height: 20.w,
+                        color: Colors.orange,
+                      ),
+                      Text(
+                        "Never check",
+                        style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
+                      ),
+                      0.gH,
+                      Text(
+                        "Periksa sekarang",
+                        style:
+                            CustomTextStyle.semiBold.copyWith(fontSize: 12.sp),
+                      )
+                    ],
+                  ),
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  Get.toNamed(Routes.HISTORY_PREDICT);
-                },
+                onTap: _homeController.onHistory,
                 child: Container(
                   width: 100.w,
                   height: 100.w,

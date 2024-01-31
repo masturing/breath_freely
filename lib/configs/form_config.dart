@@ -46,7 +46,7 @@ List<Map<String, dynamic>> registerForm = [
     'label': 'Gender',
     'hint': 'Choose your gender',
     'dataList': genderListData,
-    'controller': registerFormController['fullname'],
+    'controller': registerFormController['gender'],
   },
   {
     'type': 'text',
