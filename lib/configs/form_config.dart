@@ -90,7 +90,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Smoking',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['smoking'],
   },
   {
     'name': 'gender',
@@ -98,7 +98,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Yellow Finger',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['yellowFinger'],
   },
   {
     'name': 'gender',
@@ -106,7 +106,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Anxiety',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['anxiety'],
   },
   {
     'name': 'gender',
@@ -114,7 +114,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Peer Pressure',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['peerPressure'],
   },
   {
     'name': 'gender',
@@ -122,7 +122,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Chronic Disease',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['chronicDisease'],
   },
   {
     'name': 'gender',
@@ -130,7 +130,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Fatigue',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['fatigue'],
   },
   {
     'name': 'gender',
@@ -138,7 +138,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Allergy',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['allergy'],
   },
   {
     'name': 'gender',
@@ -146,7 +146,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Wheezing',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['wheezing'],
   },
   {
     'name': 'gender',
@@ -154,7 +154,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Coughing',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['coughing'],
   },
   {
     'name': 'gender',
@@ -162,7 +162,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Shortness of Breath',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['shortnessOfBreath'],
   },
   {
     'name': 'gender',
@@ -170,7 +170,7 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Swallowing Difficulty',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['swallowingDifficulty'],
   },
   {
     'name': 'gender',
@@ -178,6 +178,6 @@ List<Map<String, dynamic>> predictionForm = [
     'label': 'Chest Pain',
     'hint': 'Choose your gender',
     'dataList': defaultRadioData,
-    'controller': registerFormController['fullname'],
+    'controller': predictController['chestPain'],
   },
 ];

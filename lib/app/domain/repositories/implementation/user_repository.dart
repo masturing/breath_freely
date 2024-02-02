@@ -34,7 +34,7 @@ class UserRepository implements UserAbstractRepository {
             .single();
         MainConfig.storage.write('auth', userMap);
         MainConfig.storage.write('user', query);
-        print("Query: $query");
+        MainConfig.storage.write('id', query['id']);
         Get.offAllNamed(Routes.HOME);
       } else {
         Get.snackbar('Error', 'Login failed');

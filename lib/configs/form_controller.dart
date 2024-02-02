@@ -15,3 +15,18 @@ Map<String, TextEditingController> registerFormController = {
   'telephone': TextEditingController(),
   'hobby': TextEditingController(),
 };
+
+Map<String, TextEditingController> predictController = {
+  'smoking': TextEditingController(),
+  'yellowFinger': TextEditingController(),
+  'anxiety': TextEditingController(),
+  'peerPressure': TextEditingController(),
+  'chronicDisease': TextEditingController(),
+  'fatigue': TextEditingController(),
+  'allergy': TextEditingController(),
+  'coughing': TextEditingController(),
+  'wheezing': TextEditingController(),
+  'shortnessOfBreath': TextEditingController(),
+  'swallowingDifficulty': TextEditingController(),
+  'chestPain': TextEditingController(),
+};

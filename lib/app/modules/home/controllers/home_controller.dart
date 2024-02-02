@@ -1,6 +1,8 @@
 import 'package:breath_freely/app/domain/repositories/implementation/aqi_repository.dart';
+import 'package:breath_freely/app/domain/repositories/implementation/health_record_repository.dart';
 import 'package:breath_freely/app/domain/repositories/implementation/user_repository.dart';
 import 'package:breath_freely/app/routes/app_pages.dart';
+import 'package:breath_freely/config.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
@@ -11,6 +13,7 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     getAQI();
+    getHealthRecord();
     super.onInit();
   }
 
@@ -56,6 +59,15 @@ class HomeController extends GetxController {
     try {
       int result = await AQIRepository().getAQI(city: "Semarang");
       aqi.value = result;
+    } catch (e) {
+      Get.snackbar("Error", e.toString());
+    }
+  }
+
+  void getHealthRecord() async {
+    try {
+      final res = await HealthRecordRepository()
+          .getHealthRecordDashboard(id: MainConfig.storage.read('id'));
     } catch (e) {
       Get.snackbar("Error", e.toString());
     }

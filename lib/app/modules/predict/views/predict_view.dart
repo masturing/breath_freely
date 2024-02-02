@@ -18,36 +18,39 @@ class PredictView extends GetView<PredictController> {
     final PredictController controller = Get.put(PredictController());
     return CustomScaffold(
         useSafeArea: true,
-        body: Container(
-          color: CustomColor.bg,
-          padding: EdgeInsets.all(30.w),
+        body: GestureDetector(
+          onDoubleTap: controller.predictionDictationStep,
           child: Container(
+            color: CustomColor.bg,
             padding: EdgeInsets.all(30.w),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(18),
-            ),
-            child: ListView(
-              children: [
-                Text(
-                  "Prediksi",
-                  style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
-                ),
-                Text(
-                  "Selasa, 12 Januari 2024",
-                  style: CustomTextStyle.medium,
-                ),
-                CustomForm(
-                    padding: 0,
-                    text: 'Mulai Prediksi',
-                    onPressed: controller.startPrediction,
-                    fields: predictionForm),
-                8.gH,
-                CustomButton(
-                    color: Colors.grey,
-                    text: "Kembali",
-                    onPressed: controller.back)
-              ],
+            child: Container(
+              padding: EdgeInsets.all(30.w),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(18),
+              ),
+              child: ListView(
+                children: [
+                  Text(
+                    "Prediksi",
+                    style: CustomTextStyle.bold.copyWith(fontSize: 20.sp),
+                  ),
+                  Text(
+                    "Selasa, ${controller.getDateNow()}",
+                    style: CustomTextStyle.medium,
+                  ),
+                  CustomForm(
+                      padding: 0,
+                      text: 'Mulai Prediksi',
+                      onPressed: controller.startPrediction,
+                      fields: predictionForm),
+                  8.gH,
+                  CustomButton(
+                      color: Colors.grey,
+                      text: "Kembali",
+                      onPressed: controller.back)
+                ],
+              ),
             ),
           ),
         ));
